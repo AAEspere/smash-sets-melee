@@ -1,0 +1,18 @@
+{
+  "name": "smash-sets-melee",
+  "version": "1.0.0",
+  "description": "A Node.js project where users can see tournament sets for the game Super Smash Bros. Melee based on character selection.",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "smash"
+  ],
+  "author": "Aaron Espere",
+  "license": "ISC"
+}
