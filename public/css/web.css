@@ -6,19 +6,26 @@ p {
     color: white;
 }
 
+.meleerow {
+    padding-left: 160px;
+}
+
+.meleelastrow {
+    padding-left: 280px;
+}
+
 .characterSelect {
     color: white;
     list-style-type: none;
 }
 
-.characterSelect li {
-    margin: 5px;
-    padding: 5px;
-    width: 60%;
-    background-color: grey;
-    transition: transform 0.2s;
+.characterSelect li > img {
+    width: 100%;
+    transition: width 0.4s, height 0.4s;
+    background-color: black;
 }
 
-.characterSelect li:hover {
-    transform: translate(50px);
+.characterSelect li > img:hover {
+    width: 140px;
+    height: 120px;
 }
