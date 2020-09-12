@@ -1,5 +1,8 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
+const jsonParser = bodyParser.json();
+const urlencodedParser = bodyParser.urlencoded({extended: false});
 const port = 3000;
 
 var searchYoutube = require('./scripts/searchYoutube');
@@ -14,22 +17,16 @@ app.listen(port, () => {
 
 //home page
 app.get('/', function (req, res) {
-    res.render('index');
+    res.render('index', {searchQuery: null});
 })
 
 /**
  * For querying youtube once a character is selected on index
  */
-app.get('/characterSearch', function (req, res) {
-    
-    searchYoutube.searchYoutube('fox', function(collection) {
-        console.log(collection.snippet.title);
-        console.log(collection.snippet.description);
+app.post('/characterSearch', urlencodedParser, function (req, res) {
+    var character = req.body.character;
+    searchYoutube.searchYoutube(character, function(collection) {
+        console.log(collection);
+        res.render('index', {searchQuery: collection});
     })
-})
-
-//testing that callback was successful
-searchYoutube.searchYoutube('fox', function(collection) {
-    console.log(collection[0].snippet.title);
-    console.log(collection[0].snippet.description);
 })

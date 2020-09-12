@@ -12,12 +12,14 @@ for(var i in search.items) {
 
 function searchYoutube(character, callback) {
     var queryResults = [];
+    var queryString = character + ' melee VGBootCamp|' + character + ' melee Beyond the Summit -ultimate -ssbu -ssbb -brawl -smash4';
+    var queryString2 = character + ' melee tournament -ultimate -ssbu -ssbb -brawl -smash4';
 
     setup.youtube.search.list({
         part: 'snippet',
-        q: 'joji',
+        q: queryString2,
         order: 'date',
-        maxResults: 1,
+        maxResults: 3,
 
     }).then((response) => {
         const {data} = response;

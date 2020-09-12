@@ -4,6 +4,7 @@
   "description": "A Node.js project where users can see tournament sets for the game Super Smash Bros. Melee based on character selection.",
   "main": "app.js",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "google-auth-library": "^6.0.6",
