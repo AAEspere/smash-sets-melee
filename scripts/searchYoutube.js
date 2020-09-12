@@ -15,6 +15,8 @@ function searchYoutube(character, callback) {
     var queryString = character + ' melee VGBootCamp|' + character + ' melee Beyond the Summit -ultimate -ssbu -ssbb -brawl -smash4';
     var queryString2 = character + ' melee tournament -ultimate -ssbu -ssbb -brawl -smash4';
 
+    //need different query for lower tier characters
+
     setup.youtube.search.list({
         part: 'snippet',
         q: queryString2,

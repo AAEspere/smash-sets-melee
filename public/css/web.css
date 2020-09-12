@@ -1,31 +1,48 @@
 body {
-    background-color: #121212;
+   background-color: #121212;
 }
 
 p {
     color: white;
 }
 
-.meleerow {
-    padding-left: 160px;
+.example {
+    height: 100px;
+    width: 100px;
 }
 
-.meleelastrow {
+.meleerow {
     padding-left: 280px;
 }
 
+.meleelastrow {
+    padding-left: 380px;
+}
+
+.meleerow button {
+    border-width: 0px;
+    padding: 0px;
+}
+
+.meleelastrow button {
+    border-width: 0px;
+    padding: 0px;
+}
+
 .characterSelect {
-    color: white;
     list-style-type: none;
 }
 
-.characterSelect li > img {
-    width: 100%;
-    transition: width 0.4s, height 0.4s;
-    background-color: black;
+.characterSelect{
+    height: 90px;
+    width: 100px;
+    transition: 0.4s;
+    background-color: none;
+    vertical-align: top;
+    position: relative;
 }
 
-.characterSelect li > img:hover {
-    width: 140px;
-    height: 120px;
+.characterSelect:hover {
+    transform:scale(1.5);
+    z-index: 1;
 }
