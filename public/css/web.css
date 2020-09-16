@@ -17,19 +17,14 @@ p {
 }
 
 .meleerow {
-    padding-left: 280px;
+    padding-left: 15px;
 }
 
 .meleelastrow {
-    padding-left: 380px;
+    padding-left: 115px;
 }
 
 .meleerow button {
-    border-width: 0px;
-    padding: 0px;
-}
-
-.meleelastrow button {
     border-width: 0px;
     padding: 0px;
 }
