@@ -10,103 +10,110 @@
         <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
     <body>
+        <!--Melee CSS which is the background-->
         <video autoplay muted loop id = "meleeBackground">
             <source src = "/public/videos/CSS.mp4" type = "video/mp4">
         </video>
+
         <div class = "row">
-            <div class = "col-md-5 col-md-offset-2">
+            <div class = "mx-auto">
                 <img src="https://fontmeme.com/permalink/200829/bec5e86d3cf5999b503e05716cc38266.png" alt="super-smash-bros-font">
             </div>
         </div>
-        <p>Select a character to view tournament sets!</p>
-            <form action="/characterSearch" method="POST">
-                <div class = "row meleerow">
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "dr mario">
+
+        <div class = "bodytext">
+            <p>Select a character to view tournament sets!</p>
+        </div>
+        <!--Character Selection screen-->
+            <form action="/characterSearch" method="POST" class="mx-auto">
+                <div class = "row meleerow mx">
+                    <button name = "character" value = "dr mario">
                         <img class = "characterSelect" src="/public/images/Portraits/drMario.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "mario">
+                    <button name = "character" value = "mario">
                         <img class = "characterSelect" src = "/public/images/Portraits/mario.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "luigi">
+                    <button name = "character" value = "luigi">
                         <img class = "characterSelect" src = "/public/images/Portraits/luigi.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "bowser">
+                    <button name = "character" value = "bowser">
                         <img class = "characterSelect" src = "/public/images/Portraits/bowser.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "peach">
+                    <button name = "character" value = "peach">
                         <img class = "characterSelect" src = "/public/images/Portraits/peach.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "yoshi">
+                    <button name = "character" value = "yoshi">
                         <img class = "characterSelect" src = "/public/images/Portraits/yoshi.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "donkey kong">
+                    <button name = "character" value = "donkey kong">
                         <img class = "characterSelect" src = "/public/images/Portraits/dk.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "captain falcon">
+                    <button name = "character" value = "captain falcon">
                         <img class = "characterSelect" src = "/public/images/Portraits/falcon.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "ganondorf">
+                    <button name = "character" value = "ganondorf">
                         <img class = "characterSelect" src = "/public/images/Portraits/ganon.png">
                     </button>
                </div>
                <div class = "row meleerow">
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "falco">
+                    <button name = "character" value = "falco">
                         <img class = "characterSelect" src = "/public/images/Portraits/falco.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "fox">
+                    <button name = "character" value = "fox">
                         <img class = "characterSelect" src = "/public/images/Portraits/fox.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "ness">
+                    <button name = "character" value = "ness">
                         <img class = "characterSelect" src = "/public/images/Portraits/ness.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "ice climbers">
+                    <button name = "character" value = "ice climbers">
                         <img class = "characterSelect" src = "/public/images/Portraits/ics.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "kirby">
+                    <button name = "character" value = "kirby">
                         <img class = "characterSelect" src = "/public/images/Portraits/kirby.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "samus">
+                    <button name = "character" value = "samus">
                         <img class = "characterSelect" src = "/public/images/Portraits/samus.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "zelda/sheik">
+                    <button name = "character" value = "zelda/sheik">
                         <img class = "characterSelect" src = "/public/images/Portraits/zelda.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "link">
+                    <button name = "character" value = "link">
                         <img class = "characterSelect" src = "/public/images/Portraits/link.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "young link">
+                    <button name = "character" value = "young link">
                         <img class = "characterSelect" src = "/public/images/Portraits/ylink.png">
                     </button>
                </div>
                <div class = "row meleelastrow">
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "pichu">
+                    <button name = "character" value = "pichu">
                         <img class = "characterSelect" src = "/public/images/Portraits/pichu.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "pikachu">
+                    <button name = "character" value = "pikachu">
                         <img class = "characterSelect" src = "/public/images/Portraits/pikachu.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "jigglypuff">
+                    <button name = "character" value = "jigglypuff">
                         <img class = "characterSelect" src = "/public/images/Portraits/puff.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "mewtwo">
+                    <button name = "character" value = "mewtwo">
                         <img class = "characterSelect" src = "/public/images/Portraits/mewtwo.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "mr game & watch">
+                    <button name = "character" value = "mr game & watch">
                         <img class = "characterSelect" src = "/public/images/Portraits/gameAndWatch.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "marth">
+                    <button name = "character" value = "marth">
                         <img class = "characterSelect" src = "/public/images/Portraits/marth.png">
                     </button>
-                    <button data-toggle = "modal" data-target = "#drMario" name = "character" value = "roy">
+                    <button name = "character" value = "roy">
                         <img class = "characterSelect" src = "/public/images/Portraits/roy.png">
                     </button>
                </div>
-
+            <!--Below where the characters are shown is where the search results will pop up-->
             <!--MODAL THAT WILL POP UP WHEN CLICKED-->
-                <div class = "modal" id = "drMario" class = "collapsee">
-                    <% if(searchQuery != null) { %>
+            <% if(searchQuery == null) { %>
+                <% } else { %>
+                <div class =  "videoResults mx-auto">
                         <%for(var i = 0; i < searchQuery.length; i++) {%>
-                            <div class = "row">
+                            <div class = "row videoRow">
                                 <div class = "col-auto">
                                     <a href = "https://www.youtube.com/watch?v=<%=searchQuery[i].id.videoId%>" target = "_blank">
                                         <img src = "https://img.youtube.com/vi/<%=searchQuery[i].id.videoId%>/default.jpg">
@@ -114,7 +121,7 @@
                                 </div>
                                 <div class = "col-md">
                                     <a href = "https://www.youtube.com/watch?v=<%=searchQuery[i].id.videoId%>" target = "_blank"><%=searchQuery[i].snippet.title %></a>
-                                    <p><%=searchQuery[i].snippet.channelTitle%></p>
+                                    <p>Channel: <%=searchQuery[i].snippet.channelTitle%></p>
                                 </div>
                             </div>
                         <% } %>

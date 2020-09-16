@@ -21,7 +21,7 @@ function searchYoutube(character, callback) {
         part: 'snippet',
         q: queryString2,
         order: 'date',
-        maxResults: 3,
+        maxResults: 10,
 
     }).then((response) => {
         const {data} = response;
