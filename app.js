@@ -4,6 +4,8 @@ const app = express();
 const jsonParser = bodyParser.json();
 const urlencodedParser = bodyParser.urlencoded({extended: false});
 const port = 3000;
+//initializing MongoDB
+const {MongoClient} = require('mongodb');
 
 var searchYoutube = require('./scripts/searchYoutube');
 

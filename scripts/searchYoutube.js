@@ -12,15 +12,23 @@ for(var i in search.items) {
 
 function searchYoutube(character, callback) {
     var queryResults = [];
-    var queryString = character + ' melee VGBootCamp|' + character + ' melee Beyond the Summit -ultimate -ssbu -ssbb -brawl -smash4';
-    var queryString2 = character + ' melee tournament -ultimate -ssbu -ssbb -brawl -smash4';
+
+    //need to experiment with the search queries to get ONLY tournament sets
+    var queryOmit = " -ultimate -ssb4 -64 -pm";
+    var VGBootCamp = character + " melee vs. VGBootCamp";
+    var BeyondtheSummit = character + " melee vs. Beyond the Summit"
+    var queryString = VGBootCamp + "|" + BeyondtheSummit + queryOmit;
+
+    var queryString2 = character + ' melee tournament vs. -ultimate -ssb4 -64 -TAS -pm';
 
     //need different query for lower tier characters
 
     setup.youtube.search.list({
         part: 'snippet',
         q: queryString2,
-        order: 'date',
+        order: 'relevance',
+        type: 'video',
+        publishedAfter: '2016-01-01T00:00:00Z',
         maxResults: 10,
 
     }).then((response) => {
