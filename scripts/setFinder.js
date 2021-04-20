@@ -1,17 +1,45 @@
 var setup = require('./youtubeSetup')
+var sets = require('../class/set');
+var mongodb = require('./mongodb');
+const { client } = require('./mongodb');
 
-//search results
+/**
+ * 
+ * This file is for appending sets onto the MongoDB Database
+ * The easiest way to do this is to go through every channel that I 
+ * know does Melee tournaments, and then append every set onto the database
+ */
 
-function searchByTournament(tournament) {
+/**
+ * 
+ * Getting the Melee results by channel name
+ * 1. Get the results from the YouTube API
+ * 2. Get the parameters from the string (playerNames, characterNames, tournament, year)
+ * 3. Make all of that into an object in the set class, and then push that to the database
+ * 4. Make sure there are no duplicates every time this function is run
+ */
+function searchByChannel(channelName) {
     var queryResults = [];
 
-    var queryString = "melee " + tournament;
+    var queryString = "melee vs";
 
     setup.youtube.search.list({
         part: 'snippet',
         q: queryString,
         order: 'relevance',
+        channelId: channelName;
     })
+}
+
+//appending the set to the Database
+function appendSet() {
+
+    client.connect(uri, function(err, db) {
+        if(err) throw err;
+        console.log("Database created!");
+        db.close();
+    })
+
 }
 
 module.exports = {

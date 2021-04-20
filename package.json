@@ -9,7 +9,7 @@
     "express": "^4.17.1",
     "google-auth-library": "^6.0.6",
     "googleapis": "^59.0.0",
-    "mysql": "^2.18.1",
+    "mongodb": "^3.6.6",
     "youtube-player": "^5.5.2"
   },
   "devDependencies": {},
