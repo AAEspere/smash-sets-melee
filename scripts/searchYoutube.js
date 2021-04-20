@@ -20,7 +20,6 @@ function searchYoutube(character, callback) {
         q: queryString2,
         order: 'date',
         maxResults: 3,
-
     }).then((response) => {
         const {data} = response;
         data.items.forEach(function(item) {

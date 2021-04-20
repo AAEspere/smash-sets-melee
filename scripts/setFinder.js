@@ -16,8 +16,10 @@ const { client } = require('./mongodb');
  * 1. Get the results from the YouTube API
  * 2. Get the parameters from the string (playerNames, characterNames, tournament, year)
  * 3. Make all of that into an object in the set class, and then push that to the database
- * 4. Make sure there are no duplicates every time this function is run
+ * 4. Get the link to the set 
+ * 5. Make sure there are no duplicates every time this function is run
  */
+
 function searchByChannel(channelName) {
     var queryResults = [];
 
@@ -27,7 +29,37 @@ function searchByChannel(channelName) {
         part: 'snippet',
         q: queryString,
         order: 'relevance',
-        channelId: channelName;
+        channelId: channelName,
+        maxResults: 1
+    }).then((response) => {
+        const {data} = response;
+        data.items.forEach(function(item) {
+            console.log(item);
+            queryResults.push(item);
+        });
+    }).then(()=> {
+    })
+}
+
+function searchByChannelAndTournament(channelName, tournament) {
+    var queryResults = [];
+
+    var queryString = tournament;
+
+    setup.youtube.search.list({
+        part: 'snippet',
+        q: queryString + "vs",
+        order: 'relevance',
+        channelID: channelName,
+        maxResults: 1
+    }).then((response) => {
+        const {data} = response;
+        data.items.forEach(function(item) {
+            console.log(item);
+            queryResults.push(item);
+        });
+    }).then(()=> {
+
     })
 }
 
@@ -41,6 +73,14 @@ function appendSet() {
     })
 
 }
+
+/* Popular Smash Tournament Channels
+Beyond the Summit - UCKJi-4lbB3EwpLpC82OWFjA
+VGBootCamp - UCj1J3QuIftjOq9iv_rr7Egw
+*/
+
+//searchByChannel('UCKJi-4lbB3EwpLpC82OWFjA');
+searchByChannelAndTournament('UCKJi-4lbB3EwpLpC82OWFjA','SCL');
 
 module.exports = {
 
