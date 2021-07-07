@@ -63,3 +63,14 @@ p {
 .bodytext p {
     text-align: center;
 }
+
+.characterSelect li > img:hover {
+    width: 140px;
+    height: 120px;
+}
+
+/*Other characters will be greyed out when player filter is selected*/
+.img-greyscale {
+    filter: grayscale(100%);
+    transition: 0.3s;
+}

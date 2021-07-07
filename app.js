@@ -4,8 +4,9 @@ const app = express();
 const jsonParser = bodyParser.json();
 const urlencodedParser = bodyParser.urlencoded({extended: false});
 const port = 3000;
-//initializing MongoDB
-const {MongoClient} = require('mongodb');
+//MongoDB integration
+const {MongoClient} = require("mongodb");
+const uri = "mongodb+srv://Aaron:Superiormelee98@smashsetsmelee.qwzxw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 var searchYoutube = require('./scripts/searchYoutube');
 
@@ -16,6 +17,11 @@ app.use('/public',express.static('public'));
 app.listen(port, () => {
     console.log('Smash app listening at http://localhost:' + port);
 })
+
+const client = new MongoClient(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
 
 //home page
 app.get('/', function (req, res) {

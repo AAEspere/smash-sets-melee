@@ -31,6 +31,8 @@ function searchYoutube(character, callback) {
         publishedAfter: '2016-01-01T00:00:00Z',
         maxResults: 10,
 
+        order: 'date',
+        maxResults: 3,
     }).then((response) => {
         const {data} = response;
         data.items.forEach(function(item) {

@@ -1,0 +1,25 @@
+TODO:
+
+UPLOADING SETS TO DATABASE:
+-Read titles and separate sets
+-Sets should be seperated by
+    -Title of video
+    -Player1
+    -Player2
+    -Character1
+    -Character2
+    -Date
+    -Tournament
+    -Uploader
+-Then upload them to a JSON file, and then make a script to upload them to a database 
+-How do I get the names of the players?
+    -Start with the top 100
+    -Make an array or a JSON file with only the names of top 100 players
+        -Object
+            -PlayerName
+            -Character1...n
+            -Region?
+            -Probably do the top 50 from Liquidpedia
+-How do I get the names of the characters?
+    -Make an array of the character names
+    -And you can search for each name in the string
